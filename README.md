@@ -2,7 +2,7 @@ Here’s a stylish GitHub description for your project:
 
 ---
 
-# 📝 Notes Streak App
+# 📝 Notes.app
 
 **A sleek, modern note-taking application with a twist — track your productivity with a streak system, all wrapped in a dark/light theme toggle.** Built with Python, Tkinter, and MySQL, this app ensures your notes are organized, secure, and always within reach.
 
