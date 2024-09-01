@@ -33,6 +33,7 @@ class LoginWindow:
         self.connection = None
         self.connect_db()
 
+
     def connect_db(self):
         """Connect to the MySQL database."""
         try:
@@ -95,6 +96,7 @@ class RegisterWindow:
         self.register_button = ttk.Button(root, text="Register", command=self.register_user, style='TButton')
         self.register_button.pack(pady=(10, 10))
 
+
     def register_user(self):
         """Register a new user in the database."""
         username = self.username_entry.get()
@@ -117,7 +119,7 @@ class NoteApp:
         self.root = root
         self.current_theme = "darkly"  # Default theme
 
-        self.style = ttk.Style(theme=self.current_theme)  # Set the initial theme
+        self.style = ttk.Style()  # Set the initial theme
         self.configure_styles()
 
         self.notes = []
@@ -188,24 +190,33 @@ class NoteApp:
             self.load_streaks()
             self.populate_sidebar()
             self.update_streak_heatmap()
+            self.configure_styles()
 
         # Bind the listbox selection event to the on_note_select method
         self.sidebar_listbox.bind("<<ListboxSelect>>", self.on_note_select)
 
     def configure_styles(self):
-        """Configure the styles for the widgets."""
+        """Configure the styles for ttk widgets."""
+        self.style.configure('TFrame', background='#2c2c2e', borderwidth=0)
+        self.style.configure('TLabel', background='#2c2c2e', foreground='#ffffff', font=('Helvetica Neue', 24))
+        self.style.configure('TEntry', fieldbackground='#3a3a3c', foreground='#ffffff', relief='flat', borderwidth=0, padding=8)
+        self.style.configure('TButton', background='#5e5ce6', foreground='#ffffff', font=('Helvetica Neue', 12), borderwidth=0, padding=8)
+
+
+    def connect_db(self):
+        """Connect to the MySQL database."""
         try:
-            self.style.configure('TFrame', background='#2c2c2e')
-            self.style.configure('TLabel', background='#2c2c2e', foreground='#ffffff')
-            self.style.configure('TEntry', background='#3a3a3c', foreground='#ffffff', borderwidth=1, relief='solid')
-            self.style.configure('TButton', background='#5e5ce6', foreground='#ffffff', borderwidth=1, relief='solid')
-
-            # Configure the scrollbar styles if not already done
-            if not self.style.lookup('TScrollbar', 'background'):
-                self.style.configure('TScrollbar', background='#3a3a3c', troughcolor='#2c2c2e', gripcount=0)
-        except Exception as e:
-            print(f"Error configuring styles: {e}")
-
+            self.connection = mysql.connector.connect(
+                host='localhost',
+                user='root',  # Replace with your MySQL username
+                password='1234',  # Replace with your MySQL password
+                database='notes'  # Replace with your database name
+            )
+            if self.connection.is_connected():
+                print("Connected to MySQL database")
+        except Error as e:
+            messagebox.showerror("Error", f"Error connecting to database: {e}")
+            self.connection = None
 
     def create_tables(self):
         """Create tables in the database if they don't exist."""
@@ -410,9 +421,9 @@ class NoteApp:
             self.streak_heatmap.create_rectangle(x, y, x + day_size, y + day_size, fill=color, outline="")
 
     def toggle_theme(self):
-        """Toggle between dark and light themes."""
+        """Toggle between light and dark themes."""
         if self.current_theme == "darkly":
-            self.current_theme = "litera"
+            self.current_theme = "journal"
         else:
             self.current_theme = "darkly"
         self.style.theme_use(self.current_theme)
