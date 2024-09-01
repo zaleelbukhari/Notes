@@ -63,7 +63,3 @@ Toggle between dark and light modes effortlessly. The dark mode enhances focus a
 ## 🛡️ Security
 
 User credentials are securely stored in the MySQL database with basic encryption practices. Further enhancements will include password hashing and more robust authentication mechanisms.
-
----
-
-This description captures the essence of your project while appealing to developers who appreciate a stylish, feature-rich application.
