@@ -19,6 +19,19 @@
 - **Tkinter & ttkbootstrap:** For a responsive and customizable GUI.
 - **MySQL:** Secure database management for user authentication, notes, and streak tracking.
 
+## 🛡️ Security
+
+User credentials are securely stored in the MySQL database with basic encryption practices. Further enhancements will include password hashing and more robust authentication mechanisms.
+
+![python_XG9eGXUIYT](https://github.com/user-attachments/assets/0437510e-a2ca-46df-9867-29e3cbe93976)
+
+
+## 🎨 Themes & Customization
+
+Toggle between dark and light modes effortlessly. The dark mode enhances focus and minimizes eye strain, while the light mode offers a clean and crisp reading experience.
+
+![image](https://github.com/user-attachments/assets/871076f7-7324-4734-8800-90ba16d6f8fc)
+
 ## 🚀 Getting Started
 
 1. **Clone the repository:**
@@ -47,14 +60,4 @@
    python app.py
    ```
 
-## 🎨 Themes & Customization
-
-Toggle between dark and light modes effortlessly. The dark mode enhances focus and minimizes eye strain, while the light mode offers a clean and crisp reading experience.
-
-
-## 🛡️ Security
-
-User credentials are securely stored in the MySQL database with basic encryption practices. Further enhancements will include password hashing and more robust authentication mechanisms.
-
-![python_XG9eGXUIYT](https://github.com/user-attachments/assets/0437510e-a2ca-46df-9867-29e3cbe93976)
 
