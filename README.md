@@ -53,12 +53,6 @@ Here’s a stylish GitHub description for your project:
 
 Toggle between dark and light modes effortlessly. The dark mode enhances focus and minimizes eye strain, while the light mode offers a clean and crisp reading experience.
 
-## 🎯 Future Enhancements
-
-- **Note Reminders:** Automate reminders to review your notes weekly.
-- **Rich Text Editing:** Add formatting options to notes (e.g., bold, italic, bullet points).
-- **Search Functionality:** Quickly find notes by keywords.
-- **Mobile Version:** Expand accessibility with a mobile-friendly interface.
 
 ## 🛡️ Security
 
