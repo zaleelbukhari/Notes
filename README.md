@@ -44,7 +44,7 @@ Toggle between dark and light modes effortlessly. The dark mode enhances focus a
    ```
 
 2. **Install dependencies:**
-
+   Run the following command in terminal pip install -r requirements.txt
    Ensure you have Python, MySQL, and `ttkbootstrap` installed:
 
    ```bash
