@@ -1,5 +1,3 @@
-Here’s a stylish GitHub description for your project:
-
 ---
 
 # 📝 Notes.app
@@ -26,7 +24,7 @@ Here’s a stylish GitHub description for your project:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/notes-streak-app.git
+   git clone https://github.com/your-username/notes.git
    cd notes-streak-app
    ```
 
