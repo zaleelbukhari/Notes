@@ -24,8 +24,8 @@
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/notes.git
-   cd notes-streak-app
+   git clone https://github.com/your-username/Notes.git
+   cd Notes
    ```
 
 2. **Install dependencies:**
